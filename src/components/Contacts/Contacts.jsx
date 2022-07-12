@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import ContactItem from './ContactItem';
 
 function Contacts({ data, onDeleteContact }) {
@@ -18,4 +19,14 @@ function Contacts({ data, onDeleteContact }) {
   );
 }
 
+Contacts.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    })
+  ),
+  onDeleteContact: PropTypes.func,
+};
 export default Contacts;

@@ -38,7 +38,6 @@ class Phonebook extends Component {
           />
         </label>
         <label htmlFor={this.nameInputId}>
-          {' '}
           Number
           <input
             value={this.state.number}

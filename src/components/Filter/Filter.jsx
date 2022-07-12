@@ -6,7 +6,6 @@ const Filter = ({ value, onChange }) => {
 
   return (
     <label htmlFor={filterId}>
-      {' '}
       Find contacts by name
       <input
         name="filter"

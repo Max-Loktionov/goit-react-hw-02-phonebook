@@ -7,6 +7,7 @@ class Phonebook extends Component {
     number: '',
   };
   nameInputId = nanoid();
+  numberInputId = nanoid();
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -24,7 +25,6 @@ class Phonebook extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor={this.nameInputId}>
-          {' '}
           Name
           <input
             value={this.state.name}
@@ -37,12 +37,12 @@ class Phonebook extends Component {
             id={this.nameInputId}
           />
         </label>
-        <label htmlFor={this.nameInputId}>
+        <label htmlFor={this.numberInputId}>
           Number
           <input
             value={this.state.number}
             onChange={this.handleInputChange}
-            id={this.nameInputId}
+            id={this.numberInputId}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

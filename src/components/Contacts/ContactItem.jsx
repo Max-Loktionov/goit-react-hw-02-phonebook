@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function ContactItem({ name, id, number, onDeleteContact }) {
   return (
     <li key={id} id={id}>
-      {name}: {number}{' '}
+      {name}: {number}
       <button type="button" onClick={() => onDeleteContact(id)}>
         Delete
       </button>
